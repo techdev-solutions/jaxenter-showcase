@@ -1,7 +1,7 @@
 jaxenter.com Spring example
 ===========================
 
-This is the first step showing how to set up a base Spring Boot application with logging.
+This is the second step showing how to set up a base Spring Boot application. It adds persistence.
 
 Build and run
 -------------

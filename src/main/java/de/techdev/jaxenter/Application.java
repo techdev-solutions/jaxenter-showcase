@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 /**
  * @author Moritz Schulze
  */
@@ -20,12 +22,12 @@ public class Application implements CommandLineRunner {
     private Logger logger = LoggerFactory.getLogger(Application.class);
 
     @Autowired
-    private SomeService someService;
+    private PersonService personService;
 
     @Override
     public void run(String... args) throws Exception {
-        String foo = someService.foo();
-        logger.info("SomeService returned {}", foo);
+        List<Person> person = personService.findPersonsWithFirstNameLikeMo();
+        logger.info("SomeService returned {}", person);
     }
 
     public static void main(String[] args) {
