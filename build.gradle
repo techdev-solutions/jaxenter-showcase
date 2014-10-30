@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        springBootVersion = '1.1.8.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        maven { url "http://repo.spring.io/release" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'jaxenter-example'
+    version = '1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-logging")
+}

@@ -1,0 +1,11 @@
+# IDEA
+atlassian-ide-plugin.xml
+*.iml
+/.idea/
+
+# OSX
+.DS_Store
+
+# gradle
+/.gradle/
+/build/
