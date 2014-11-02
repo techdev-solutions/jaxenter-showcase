@@ -8,4 +8,6 @@ atlassian-ide-plugin.xml
 
 # gradle
 /.gradle/
-/build/
+build/
+
+/tokens.db

@@ -1,2 +1,4 @@
 rootProject.name = 'jaxenter-article1'
 
+include 'authentication-server'
+

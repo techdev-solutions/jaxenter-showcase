@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'jaxenter-example-authentication-server'
+    version = '1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.security.oauth:spring-security-oauth2:2.0.3.RELEASE")
+
+    compile("org.xerial:sqlite-jdbc:3.7.2")
+}
