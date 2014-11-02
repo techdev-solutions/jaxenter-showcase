@@ -20,10 +20,10 @@ public class PersistenceConfiguration {
 
     @PostConstruct
     private void addPersons() {
-        Person moritz = new Person();
-        moritz.setFirstName("Moritz");
-        Person monika = new Person();
-        monika.setFirstName("Monika");
-        personRepository.save(asList(moritz, monika));
+        Person john = new Person();
+        john.setFirstName("John");
+        Person mary = new Person();
+        mary.setFirstName("Mary");
+        personRepository.save(asList(john, mary));
     }
 }

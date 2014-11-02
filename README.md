@@ -1,7 +1,7 @@
 jaxenter.com Spring example
 ===========================
 
-This is the second step showing how to set up a base Spring Boot application. It adds Spring Data REST.
+This is the third step showing how to set up a base Spring Boot application. It adds security to the first step.
 
 Build and run
 -------------
@@ -14,11 +14,14 @@ and run with
     java -jar ./build/libs/jaxenter-example-1.0.jar
     
 Example requests
-----------------
+-------------
+When running the following requests should give you results:
 
-    curl localhost:8080
-    curl localhost:8080/persons
-    curl -X POST -H "Content-Type: application/json" -d "{\"firstName\": \"John\"}" localhost:8080/persons
-    curl localhost:8080/persons/search/findByFirstNameLike\?firstName=J%25
-    curl -X PUT localhost:8080/persons/1 -d "{\"firstName\": \"Jane\"}" -H "Content-Type: application/json"
-    curl -X DELETE localhost:8080/persons/1
+    curl John:password@localhost:8080
+    curl John:password@localhost:8080/persons
+    curl -X POST -H "Content-Type: application/json" -d "{\"firstName\": \"John\"}" John:password@localhost:8080/persons
+    curl John:password@localhost:8080/persons/search/findByFirstNameLike\?firstName=J%25
+    curl -X PUT John:password@localhost:8080/persons/1 -d "{\"firstName\": \"Jane\"}" -H "Content-Type: application/json"
+    curl -X DELETE John:password@localhost:8080/persons/1
+    
+The other username is Mary and has less rights than John.

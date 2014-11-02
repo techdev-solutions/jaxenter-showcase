@@ -34,5 +34,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     runtime("org.hsqldb:hsqldb")
 
+    compile("org.springframework.boot:spring-boot-starter-security")
+
     compile("org.projectlombok:lombok:1.14.8")
 }
