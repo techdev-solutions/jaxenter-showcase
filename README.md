@@ -1,7 +1,7 @@
 jaxenter.com Spring example
 ===========================
 
-This is the third step showing how to set up a base Spring Boot application. It adds security to the first step.
+This is the third step showing how to set up a base Spring Boot application. This steps adds security to POST, PUT and DELETE requests.
 
 Build and run
 -------------
